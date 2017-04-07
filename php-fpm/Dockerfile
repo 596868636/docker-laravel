@@ -2,8 +2,8 @@
 # See: https://hub.docker.com/_/php/
 ######
 
-FROM php:7.0.5-fpm
-MAINTAINER micooz <micooz@hotmail.com>
+FROM php:7.1-fpm
+MAINTAINER Ric <596868636@qq.com>
 
 ######
 # You can install php extensions using docker-php-ext-install

@@ -24,7 +24,7 @@ fpm:
   volumes:
     - ./app/src:/usr/share/nginx/html
     # Your php.ini
-    - ./php-fpm/php.ini-production:/usr/local/etc/php/php.ini:ro
+    - ./php-fpm/php.ini:/usr/local/etc/php/php.ini:ro
   # environment:
     # Set your APP env variables here:
     # - APP_KEY=
@@ -45,4 +45,18 @@ mysql:
     # NOTE: your data will be stored in ./mysql
     - ./mysql:/var/lib/mysql
   environment:
-    - MYSQL_ROOT_PASSWORD=your_mysql_password
+    - MYSQL_DATABASE = hdvgmx
+    - MYSQL_USER = mysql
+    - MYSQL_PASSWORD = mysql
+    - MYSQL_ROOT_PASSWORD = 911121
+
+# KV
+redis:
+  image: mysql:latest
+  ports:
+    # Allow client to access 6379
+    - "6379:6379"
+  volumes:
+    # NOTE: your redis.conf will be stored in ./redis/redis.conf
+    - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
+    - ./redis/data:/data
