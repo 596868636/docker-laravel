@@ -47,7 +47,7 @@ services:
       # NOTE: your data will be stored in ./mysql
       - ./mysql:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD = 911121
+      - MYSQL_ROOT_PASSWORD=911121
 
   # KV
   redis:
